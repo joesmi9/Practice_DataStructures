@@ -1,5 +1,5 @@
 # Practice_DataStructures
-A repo for practicing Design Pattern concepts and implementations.
+A repo for practicing Data Structure concepts and implementations.
 
 
 ## References
