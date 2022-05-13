@@ -14,7 +14,7 @@ function arrayExamples() {
      * It is a common practice to declare arrays with the const keyword.
      */
 
-    const testArray = ["item 1", "item 2", "item 3"];
+    const array_name = ["item 1", "item 2", "item 3"];
 
     /**
      * You can also create an array, and then provide the elements:
@@ -24,15 +24,12 @@ function arrayExamples() {
     cars[1] = "Volvo";
     cars[2] = "BMW";
 
+
     /**
      * length
      */
-    console.log(cars.length)
 
-    /**
-     * push
-     */
-    testArray.push("item 4");
+    console.log(cars.length)
 
 };
 
