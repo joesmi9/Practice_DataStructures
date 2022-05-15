@@ -24,6 +24,8 @@ function arrayExamples() {
     cars[1] = "Volvo";
     cars[2] = "BMW";
 
+    cars.push("test")
+
 
     /**
      * length

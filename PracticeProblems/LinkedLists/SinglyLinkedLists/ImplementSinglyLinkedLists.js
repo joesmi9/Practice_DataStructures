@@ -1,5 +1,4 @@
 class Node {
-
     constructor(element) {
         this.element = element;
         this.next = null
@@ -12,73 +11,62 @@ class LinkedList {
         this.size = 0;
     }
 
-
-
-    // functions to be implemented
-    // add(element)
+    /**
+     * Opearations
+     */
     add(element) {
-        // creates a new node
-        var node = new Node(element);
 
-        // to store current node
-        var current;
+        const node = new Node(element);
 
-        // if list is Empty add the
-        // element and make it head
         if (this.head == null)
             this.head = node;
         else {
-            current = this.head;
 
-            // iterate to the end of the
-            // list
+            let current = this.head;
+
+            // iterate to the end of the list
             while (current.next) {
                 current = current.next;
             }
 
-            // add node
             current.next = node;
         }
         this.size++;
     }
 
-    // insertAt(element, location)
     insertAt(element, index) {
-        if (index < 0 || index > this.size)
+        if (index < 0 || index > this.size) {
             return console.log("Please enter a valid index.");
-        else {
-            // creates a new node
-            var node = new Node(element);
-            var curr, prev;
-
-            curr = this.head;
-
-            // add the element to the
-            // first index
-            if (index == 0) {
-                node.next = this.head;
-                this.head = node;
-            } else {
-                curr = this.head;
-                var it = 0;
-
-                // iterate over the list to find
-                // the position to insert
-                while (it < index) {
-                    it++;
-                    prev = curr;
-                    curr = curr.next;
-                }
-
-                // adding an element
-                node.next = curr;
-                prev.next = node;
-            }
-            this.size++;
         }
+
+        // creates a new node
+        const node = new Node(element);
+        let prev;
+
+        let curr = this.head;
+
+
+        if (index == 0) {
+            node.next = this.head;
+            this.head = node;
+        } else {
+            curr = this.head;
+            var it = 0;
+
+            while (it < index) {
+                it++;
+                prev = curr;
+                curr = curr.next;
+            }
+
+            // adding an element
+            node.next = curr;
+            prev.next = node;
+        }
+        this.size++;
+
     }
 
-    // removeFrom(location)
     removeFrom(index) {
         if (index < 0 || index >= this.size)
             return console.log("Please Enter a valid index");
@@ -109,7 +97,6 @@ class LinkedList {
         }
     }
 
-    // removeElement(element)
     removeElement(element) {
         var current = this.head;
         var prev = null;
